@@ -14,11 +14,9 @@ public class StringCalculator {
         if (numbers.isEmpty()) {
             return 0;
         }
-
         String delimiter = getDelimiter(numbers);
         List<Integer> numbersList = getNumbersList(numbers, delimiter);
         validateNumbers(numbersList);
-
         return numbersList.stream().mapToInt(Integer::intValue).sum();
     }
 
